@@ -59,10 +59,10 @@ function fail()
     "$BUCKET_API_V1_URL$OWNER/$REPO/pullrequests/${REQUEST_ID}/comments" 1>/dev/null
 }
 
-if [ "$JOB" == '"SUCCESS"' ]
+if [[ "$JOB" == '"SUCCESS"' ]]
 then
   success
-elif [ "$JOB" == '"UNSTABLE"' ]
+elif [[ "$JOB" == '"UNSTABLE"' ]]
 then
   unstable
 else
